@@ -6,7 +6,7 @@ module.exports = {
 	name: 'help',
 	description: 'help',
 	execute(message, args) {
-		message.react('730247445396848680');
+		message.react(':box:');
 		const exampleEmbed = new Discord.MessageEmbed()
 			.setColor('#922b3e')
 			.setTitle('77 Bot Help!')
