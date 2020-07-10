@@ -7,11 +7,11 @@ module.exports = {
 		const user = message.mentions.users.first();
 		if (user) {
 			const member = message.guild.member(user);
-			message.channel.send(`Tag: ${member.user.tag}\nNickname: ${member.displayName}\nID: ${member.id}\nAccount Created: ${member.user.createdTimestamp}\nJoined On: ${member.joinedTimestamp}`);
+			message.channel.send(`Tag: ${member.user.tag}\nNickname: ${member.displayName}\nID: ${member.id}\nAccount Created: ${member.user.createdAt}\nJoined On: ${member.joinedAt}`);
 	
 		}
 		else {
-			return message.channel.send(`Tag: ${member.author.tag}\nNickname: ${member.author.displayName}\nID: ${member.author.id}\nAccount Created: ${member.author.createdTimestamp}\nJoined On: ${member.author.joinedTimestamp}`);
+			return message.channel.send(`Tag: ${message.author.tag}\nNickname: ${message.author.displayName}\nID: ${message.author.id}\nAccount Created: ${message.author.createdAt}\nJoined On: ${message.author.joinedAt}`);
 		}
 	},
 };
