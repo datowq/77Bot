@@ -7,7 +7,7 @@ module.exports = {
 		const user = message.mentions.users.first();
 		if (user) {
 			const member = message.guild.member(user);
-			message.channel.send(`Tag: ${member.user.tag}\nNickname: ${member.displayName}\nID: ${member.id}\nAccount Created: ${member.user.createdAt}\nJoined On: ${member.joinedAt}\nRoles: ${member.roles.chache}`);
+			message.channel.send(`Tag: ${member.user.tag}\nNickname: ${member.displayName}\nID: ${member.id}\nAccount Created: ${member.user.createdAt}\nJoined On: ${member.joinedAt}\nRoles: ${member.roles.cache}`);
 	
 		}
 		else {
