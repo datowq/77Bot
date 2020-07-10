@@ -11,7 +11,7 @@ module.exports = {
 	
 		}
 		else {
-			return message.channel.send(`Tag: ${member.user.tag}\nNickname: ${member.displayName}\nID: ${member.id}\nAccount Created: ${member.user.createdTimestamp}\nJoined On: ${member.joinedTimestamp}`);
+			return message.channel.send(`Tag: ${member.author.tag}\nNickname: ${member.author.displayName}\nID: ${member.author.id}\nAccount Created: ${member.author.createdTimestamp}\nJoined On: ${member.author.joinedTimestamp}`);
 		}
 	},
 };
