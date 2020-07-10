@@ -9,7 +9,7 @@ module.exports = {
 		async function sub() {
 			const args = message.content.slice(8);
 
-			if(message.author.tag == 'Neeko' && args == 'gay') {
+			if(message.author.tag == 'neeko#3127' && args == 'gay') {
 
 				return message.channel.send("fuck you neeko");
 
