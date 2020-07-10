@@ -7,7 +7,7 @@ module.exports = {
 		const user = message.mentions.users.first();
 		if (user) {
 			const member = message.guild.member(user);
-			message.channel.send(`Username: ${member.displayName}\nID: ${member.id}`);
+			message.channel.send(`Username: ${member.user.tag}\nID: ${member.id}`);
 	
 		}
 		else {
