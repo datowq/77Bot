@@ -8,6 +8,12 @@ module.exports = {
 	execute(message, args) {
 		async function sub() {
 			const args = message.content.slice(8);
+
+			if(message.author.tag == 'Neeko' && args == 'gay') {
+
+				return message.channel.send("fuck you neeko");
+
+			}
 			let img = await imageapi(`${args}`);
 			message.channel.send(new MessageAttachment(img));
 		}
