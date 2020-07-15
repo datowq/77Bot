@@ -56,9 +56,15 @@ client.on('message', message => {
 
 		if(message.content.startsWith('hi') || message.content.startsWith('hello') || message.content.startsWith('Hello') || message.content.startsWith('Hi')) {
 
-			message.channel.send("just pls no, ty :>");
+			message.channel.send("fuck you yato");
 
 		}
+
+	}
+
+	if(message.content.startsWith(',reddit nekopara')) {
+
+		message.channel.send("fuck you");
 
 	}
 });
