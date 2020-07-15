@@ -55,7 +55,7 @@ client.on('message', message => {
 
 	if(message.content.startsWith(',reddit nekopara')) {
 		message.delete()
-		message.channel.bulkDelete(2);
+		message.channel.delete()
 		message.channel.send("fuck you");
 
 	}
