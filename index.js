@@ -52,6 +52,15 @@ client.once('ready', () => {
 //LOGS ALL MESSAGES
 client.on('message', message => {
 	console.log("\n" + message.author.username + ":\n" + message.content);
+	if(message.author.username == 'Yato') {
+
+		if(message.content.startsWith('hi') || message.content.startsWith('hello') || message.content.startsWith('Hello') || message.content.startsWith('Hi')) {
+
+			message.channel.send("just pls no, ty :>");
+
+		}
+
+	}
 });
 
 

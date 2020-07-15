@@ -9,7 +9,7 @@ module.exports = {
 		async function sub() {
 			const args = message.content.slice(8);
 
-			if(args == 'loli' || args == 'nekopara' || args == 'hentai') {
+			if(args == 'nekopara') {
 
 				return message.channel.send("just pls no, ty :>");
 
