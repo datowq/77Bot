@@ -69,9 +69,9 @@ client.on('message', message => {
 
 	}
 
-	if(message.author.id == "713353758913986562"){
-		message.delete()
-	}
+	//if(message.author.id == "713353758913986562"){
+	//	message.delete()
+	//}
 
 
 });
