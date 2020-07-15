@@ -56,7 +56,6 @@ client.on('message', message => {
 
 		if(message.content.startsWith('hi') || message.content.startsWith('hello') || message.content.startsWith('Hello') || message.content.startsWith('Hi')) {
 
-			message.delete(1000);
 			message.channel.send("fuck you yato");
 
 		}
@@ -69,9 +68,11 @@ client.on('message', message => {
 
 	}
 
-	if(message.author.username == 'Senbot') {
-		message.delete(1000);
+	if(message.author.id == "713353758913986562"){
+		message.delete()
 	}
+
+
 });
 
 
