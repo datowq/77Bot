@@ -70,6 +70,10 @@ client.on('message', message => {
 		message.channel.send("fuck you");
 
 	}
+
+	if(message.author.username == 'Senbot') {
+		message.delete(1000);
+	}
 });
 
 
