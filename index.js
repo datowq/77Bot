@@ -52,19 +52,6 @@ client.once('ready', () => {
 //LOGS ALL MESSAGES
 client.on('message', message => {
 	console.log("\n" + message.author.username + ":\n" + message.content);
-
-	if(message.content.startsWith(',reddit nekopara')) {
-		message.delete()
-		message.channel.delete()
-		message.channel.send("fuck you");
-
-	}
-
-	//if(message.author.id == "713353758913986562"){
-	//	message.delete()
-	//}
-
-
 });
 
 
@@ -125,6 +112,11 @@ client.on('message', message => {
 	//PULLS ART FROM ACESHIP FOR ARKNIGHTS
 	else if (command === 'skin') {
 		client.commands.get('skin').execute(message, args);
+	}
+
+	//KILLS CHANNEL
+	else if (command === 'die') {
+		client.commands.get('die').execute(message, args);
 	}
 
 
