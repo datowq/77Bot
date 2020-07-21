@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const client = new Discord.Client();
 
 module.exports = {
 	name: 'ban',
@@ -7,7 +8,7 @@ module.exports = {
 		const user = message.mentions.users.first();
 
 			if (user) {
-				async (bot, message, args) => {
+				async (client, message, args) => {
 					let member = await message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(r => r.user.username.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.guild.members.cache.find(r => r.displayName.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.member;
 				}
 				if (message.member.hasPermission('BAN_MEMBERS')) {
