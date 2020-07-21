@@ -5,7 +5,7 @@ module.exports = {
 	description: 'user',
 	execute(message, args) {
 		const user = message.mentions.users.first();
-		const member = message.guild.member(user);
+		let member = await message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(r => r.user.username.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.guild.members.cache.find(r => r.displayName.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.member;
 		const roles = member.roles.cache
             .filter(r => r.id !== message.guild.id)
             .map(r => r.name).join(", ") || 'none';
