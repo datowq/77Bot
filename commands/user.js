@@ -5,9 +5,9 @@ module.exports = {
 	description: 'user',
 	execute(message, args) {
 		const user = message.mentions.users.first();
-		let roles = message.guild.roles.cache
+		const roles = member.roles.cache
             .filter(r => r.id !== message.guild.id)
-            .map(r => r.name).join("\n") || 'none';
+            .map(r => r.name).join(", ") || 'none';
 		if (user) {
 			const member = message.guild.member(user);
 			message.channel.send(`Tag: ${member.user.tag}\nNickname: ${member.displayName}\nID: ${member.id}\nAccount Created: ${member.user.createdAt}\nJoined On: ${member.joinedAt}\nRoles: ${roles}`);
