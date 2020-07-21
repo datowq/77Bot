@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
 	name: 'ban',
 	description: 'ban',
-	run: async (bto, message, args) {
+	run: async (client, message, args) => {
 		const user = message.mentions.users.first();
 
 			if (user) {
