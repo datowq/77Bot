@@ -76,7 +76,7 @@ client.on('message', message => {
 
 	//USER INFO
 	else if (command === `user`) {
-		client.commands.get('user').execute(message, args);
+		client.commands.get('user').run(client, message, args);
 	}
 
 	//ADDS A CHANNEL
