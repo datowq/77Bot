@@ -5,7 +5,8 @@ module.exports = {
 	description: 'user',
 	execute(message, args) {
 		const user = message.mentions.users.first();
-		const roles = user.roles.cache
+		const member = message.guild.member(user);
+		const roles = member.roles.cache
             .filter(r => r.id !== message.guild.id)
             .map(r => r.name).join(", ") || 'none';
 		if (user) {
