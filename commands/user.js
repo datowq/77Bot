@@ -5,15 +5,18 @@ module.exports = {
 	description: 'user',
 	execute(message, args) {
 		const user = message.mentions.users.first();
+		let roles = message.guild.roles.cache
+            .filter(r => r.id !== message.guild.id)
+            .map(r => r.name).join("\n") || 'none';
 		if (user) {
 			const member = message.guild.member(user);
-			message.channel.send(`Tag: ${member.user.tag}\nNickname: ${member.displayName}\nID: ${member.id}\nAccount Created: ${member.user.createdAt}\nJoined On: ${member.joinedAt}\nRoles: ${member.roles}`);
+			message.channel.send(`Tag: ${member.user.tag}\nNickname: ${member.displayName}\nID: ${member.id}\nAccount Created: ${member.user.createdAt}\nJoined On: ${member.joinedAt}\nRoles: ${roles}`);
 	
 		}
 		else {
 			const user = message.author;
 			const member = message.guild.member(user);
-			return message.channel.send(`Tag: ${member.user.tag}\nNickname: ${member.displayName}\nID: ${member.id}\nAccount Created: ${member.user.createdAt}\nJoined On: ${member.joinedAt}\nRoles: ${member.roles}`);
+			return message.channel.send(`Tag: ${member.user.tag}\nNickname: ${member.displayName}\nID: ${member.id}\nAccount Created: ${member.user.createdAt}\nJoined On: ${member.joinedAt}\nRoles: ${roles}`);
 		}
 	},
 };
