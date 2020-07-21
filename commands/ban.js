@@ -3,11 +3,13 @@ const Discord = require('discord.js');
 module.exports = {
 	name: 'ban',
 	description: 'ban',
-	execute(message, args) {
+	run: async (bto, message, args) {
 		const user = message.mentions.users.first();
 
 			if (user) {
-				const member = message.guild.member(user);
+				async (bot, message, args) => {
+					let member = await message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(r => r.user.username.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.guild.members.cache.find(r => r.displayName.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.member;
+				}
 				if (message.member.hasPermission('BAN_MEMBERS')) {
 
 						member.ban('Bye').then(() => {

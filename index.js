@@ -86,12 +86,12 @@ client.on('message', message => {
 
 	//KICKS A DUMMY
 	else if (command === 'kick') {
-		client.commands.get('kick').execute(message, args);
+		client.commands.get('kick').run(client, message, args);
 	}
 
 	//BANS A DUMMY
 	else if (command === 'ban') {
-		client.commands.get('ban').execute(message, args);
+		client.commands.get('ban').run(client, message, args);
 	}
 	
 	//PULLS RANDOM IMAGE FROM A SUBREDDIT
