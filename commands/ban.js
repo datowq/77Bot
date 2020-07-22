@@ -10,18 +10,22 @@ module.exports = {
 
 			if (message.member.hasPermission('BAN_MEMBERS')) {
 
-					member.ban('Bye').then(() => {
+					member.ban().then(() => {
+
 						return message.reply(`bye bye ${user.tag}`);
-					})
-					/*.catch(err => {
+						
+					}).catch(err => {
 						return message.reply('What?!');
 
 						console.error(err);
-					});*/
+					});
+					
 			}
 
 			else {
+
 				return message.reply("you don't have perms lmao");
+
 			}
 		
 	},
