@@ -5,28 +5,28 @@ module.exports = {
 	name: 'kick',
 	description: 'kick',
 	run: async (client, message, args) => {
-		const user = message.mentions.users.first();
-        async (bot, message, args) => {
-			let member = await message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(r => r.user.username.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.guild.members.cache.find(r => r.displayName.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.member;
-		}
-        if (user) {
-            if (message.member.hasPermission('KICK_MEMBERS')) {
+        
+        let member = await message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(r => r.user.username.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.guild.members.cache.find(r => r.displayName.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.member;
 
-                    member.kick('Bye').then(() => {
-                        return message.reply(`bye bye @${user.tag}`);
-                    })
-                    .catch(err => {
-                        return message.reply('what?!');
+        if (message.member.hasPermission('KICK_MEMBERS')) {
 
-                        console.error(err);
-                    });
-            }
-            else {
-                return message.reply("you don't have perms lmao");
-            }
+                 member.kick().then(() => {
+
+                    return message.reply(`bye bye ${member.user.tag}`);
+                    
+                }).catch(err => {
+                    return message.reply('What?!');
+
+                    console.error(err);
+                });
+                
         }
+
         else {
-        return message.reply("you didn't mention the user to kick!");
+
+            return message.reply("you don't have perms lmao");
+
         }
+
 	},
 };
