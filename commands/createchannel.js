@@ -8,10 +8,11 @@ module.exports = {
 		if (message.member.hasPermission('MANAGE_CHANNELS')) {
 			
 			var str = message.content.slice(15);
+			var secondstr = str.slice(str.indexOf(' '));
+			var thirdstr = secondstr.slice(secondstr.indexOf(' '));
 			var type = str.slice(0, str.indexOf(' '));
-			var nextone = str.slice(str.indexOf(' '));
-			var name = nextone.slice(0, nextone.indexOf(' '));
-			var nsfwlabel = nextone.slice(nextone.indexOf(' '));
+			var name = secondstr.slice(0, secondstr.indexOf(' '));
+			var nsfwlabel =  thirdstr.slice(0,  thirdstr.indexOf(' '));
 			
 			return message.channel.send(nsfwlabel);
 
