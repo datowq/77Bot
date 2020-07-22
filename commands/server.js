@@ -9,7 +9,7 @@ module.exports = {
             .filter(r => r.id !== message.guild.id)
 			.map(r => r.name).join(" | ") || 'none';
 			
-		message.channel.send(`Server: ${message.guild.name}\nOwner: ${message.guild.owner.tag}\nTier: ${message.guild.premiumTier}\nMembers: ${message.guild.memberCount}\nCreated: ${message.guild.createdAt}\nRegion: ${message.guild.region}\nRole List: ${roles}`);
+		message.channel.send(`Server: ${message.guild.name}\nOwner: ${message.guild.owner.user.tag}\nTier: ${message.guild.premiumTier}\nMembers: ${message.guild.memberCount}\nCreated: ${message.guild.createdAt}\nRegion: ${message.guild.region}\nRole List: ${roles}`);
 
 	},
 };
