@@ -5,12 +5,11 @@ module.exports = {
 	name: 'ban',
 	description: 'ban',
 	run: async (client, message, args) => {
-		const user = message.mentions.users.first();
+		let member = await message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(r => r.user.username.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.guild.members.cache.find(r => r.displayName.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.member;
 
-			if (user) {
-				async (client, message, args) => {
-					let member = await message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(r => r.user.username.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.guild.members.cache.find(r => r.displayName.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.member;
-				}
+			if (member) {
+
+
 				if (message.member.hasPermission('BAN_MEMBERS')) {
 
 						member.ban('Bye').then(() => {
