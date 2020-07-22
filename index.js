@@ -44,7 +44,7 @@ const permissions = new Permissions([
 //STARTUP
 client.once('ready', () => {
 	client.user.setStatus('Online');
-	client.user.setActivity('Arknights | `help', { type: 'PLAYING'});
+	client.user.setActivity('Arknights | `help', { type: 'WATCHING'});
 	console.log('Ready!');
 
 });
