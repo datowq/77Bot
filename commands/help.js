@@ -13,7 +13,7 @@ module.exports = {
 			.setURL('https://www.twitch.tv/pinguefy')
 			.attachFiles(['./icon.png'])
 			.setThumbnail('attachment://icon.png')
-			.setDescription('```diff\n->  `server```spits out some server info\n```diff\n->  `user {username}```spits out some user info\n```diff\n->  `createchannel {channelname}```creates a channel of your liking\n```diff\n->  `kick {username}```bye bye :)\n```diff\n->  `ban {username}```bye bye big boy\n```diff\n->  `kyaru```sends a random image of the best catgirl known to man```diff\n->  `arknights```sends a random image from the best game known to man\n')
+			.setDescription('```diff\n->  `server```spits out some server info\n```diff\n->  `user {username}```spits out some user info\n```diff\n->  `createchannel {type} {channelname}```creates a channel of your liking\n```diff\n->  `kick {username}```bye bye :)\n```diff\n->  `ban {username}```bye bye big boy\n```diff\n->  `kyaru```sends a random image of the best catgirl known to man```diff\n->  `arknights```sends a random image from the best game known to man\n')
 
 		message.author.send(embed);
 	},
