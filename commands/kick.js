@@ -12,7 +12,7 @@ module.exports = {
 
                  member.kick().then(() => {
 
-                    return message.reply(`bye bye ${member.user.tag}`);
+                    return message.channel.send(`bye bye ${member.user.tag}`);
                     
                 }).catch(err => {
                     return message.reply('What?!');
