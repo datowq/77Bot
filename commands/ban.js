@@ -10,7 +10,7 @@ module.exports = {
 
 			if (message.member.hasPermission('BAN_MEMBERS')) {
 
-					member.ban().then(() => {
+					member.ban().then((member) => {
 
 						return message.reply(`bye bye ${user.tag}`);
 						
