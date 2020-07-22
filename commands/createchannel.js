@@ -10,9 +10,10 @@ module.exports = {
 			var str = message.content.slice(15);
 			var secondstr = str.slice(str.indexOf(' '));
 			var thirdstr = secondstr.slice(secondstr.indexOf(' '));
+
 			var type = str.slice(0, str.indexOf(' '));
 			var name = secondstr.slice(0, secondstr.indexOf(' '));
-			var nsfwlabel =  thirdstr.slice(0,  thirdstr.indexOf(' '));
+			var nsfwlabel =  thirdstr.slice(thirdstr.indexOf(' '));
 			
 			return message.channel.send(nsfwlabel);
 
