@@ -7,12 +7,13 @@ module.exports = {
 
 		if (message.member.hasPermission('MANAGE_CHANNELS')) {
 
-			const channelname = message.content.slice(15);
+			const type = message.content.slice(15, name.indexOf(' '));
+			const name = type.substr(name.indexOf(' ')+1);
 			
-			if(channelname === "voice" || channelname === "Voice" || channelname === "v" || channelname === "V") {
+			if(type === "voice" || type === "Voice" || type === "v" || type === "V") {
 
 				// Create a new channel with permission overwrites
-				message.guild.channels.create('new voice', {
+				message.guild.channels.create('${name}', {
 					type: 'voice',
 					permissionOverwrites: [
 					{
@@ -24,10 +25,10 @@ module.exports = {
 
 			}
 
-			if(channelname === "text" || channelname === "Text" || channelname === "t" || channelname === "T") {
+			if(type === "text" || type === "Text" || type === "t" || type === "T") {
 				
 				// Create a new channel with permission overwrites
-				message.guild.channels.create('new text', {
+				message.guild.channels.create('${name}', {
 					type: 'text',
 					permissionOverwrites: [
 					{
