@@ -12,7 +12,7 @@ module.exports = {
 			if(channelname === "voice" || channelname === "Voice" || channelname === "v" || channelname === "V") {
 
 				// Create a new channel with permission overwrites
-				guild.channels.create('new voice', {
+				message.guild.channels.create('new voice', {
 					type: 'voice',
 					permissionOverwrites: [
 					{
@@ -27,7 +27,7 @@ module.exports = {
 			if(channelname === "text" || channelname === "Text" || channelname === "t" || channelname === "T") {
 				
 				// Create a new channel with permission overwrites
-				guild.channels.create('new text', {
+				message.guild.channels.create('new text', {
 					type: 'text',
 					permissionOverwrites: [
 					{
