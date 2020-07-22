@@ -14,7 +14,7 @@ module.exports = {
 			
 		
 		message.channel.send(`Tag: ${member.user.tag}\nNickname: ${member.displayName}\nID: ${member.id}\nAccount Created: ${member.user.createdAt}\nJoined On: ${member.joinedAt}\nRoles: ${roles}`);
-	
+		
 
 		
 	},

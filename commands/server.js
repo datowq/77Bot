@@ -7,7 +7,9 @@ module.exports = {
 
 		let roles = message.guild.roles.cache
             .filter(r => r.id !== message.guild.id)
-            .map(r => r.name).join("\n ") || 'none';
+			.map(r => r.name).join(" | ") || 'none';
+			
 		message.channel.send(`Server name: ${message.guild.name}\nTotal members: ${message.guild.memberCount}\nAll Roles: ${roles}`);
+
 	},
 };
