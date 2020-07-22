@@ -9,7 +9,7 @@ module.exports = {
 			
 			var str = message.content.slice(15);
 			var type = str.slice(0, str.indexOf(' '));
-			var name = type.substr(str.indexOf(' '));
+			var name = str.slice(str.indexOf(' '));
 			
 			if(type === "voice" || type === "Voice" || type === "v" || type === "V") {
 
