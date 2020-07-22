@@ -6,9 +6,10 @@ module.exports = {
 	execute(message, args) {
 
 		if (message.member.hasPermission('MANAGE_CHANNELS')) {
-
-			const type = message.content.slice(15,' ');
-			const name = type.substr(' ');
+			
+			var str = message.content.slice(15);
+			var type = str.slice(16, str.indexOf(' '));
+			var name = type.substr(str.indexOf(' '));
 			
 			if(type === "voice" || type === "Voice" || type === "v" || type === "V") {
 
