@@ -7,8 +7,8 @@ module.exports = {
 
 		if (message.member.hasPermission('MANAGE_CHANNELS')) {
 
-			const type = message.content.slice(15, message.conent.indexOf(' '));
-			const name = type.substr(type.indexOf(' ')+1);
+			const type = message.content.slice(15,' ');
+			const name = type.substr(' ');
 			
 			if(type === "voice" || type === "Voice" || type === "v" || type === "V") {
 
