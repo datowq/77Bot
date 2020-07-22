@@ -11,35 +11,16 @@ module.exports = {
 			var type = str.slice(0, str.indexOf(' '));
 			var name = str.slice(str.indexOf(' '));
 			
-			if(type === "voice" || type === "Voice" || type === "v" || type === "V") {
-
-				// Create a new channel with permission overwrites
-				message.guild.channels.create(name, {
-					type: 'voice',
-					permissionOverwrites: [
-					{
-						id: message.author.id,
-						deny: ['VIEW_CHANNEL'],
-					},
-					],
-				})
-
-			}
-
-			if(type === "text" || type === "Text" || type === "t" || type === "T") {
-				
-				// Create a new channel with permission overwrites
-				message.guild.channels.create(name, {
-					type: 'text',
-					permissionOverwrites: [
-					{
-						id: message.author.id,
-						deny: ['VIEW_CHANNEL'],
-					},
-					],
-				})
-
-			}
+			// Create a new channel with permission overwrites
+			message.guild.channels.create(name, {
+				type: type,
+				permissionOverwrites: [
+				{
+					id: message.author.id,
+					deny: ['VIEW_CHANNEL'],
+				},
+				],
+			})
 
 		}
 
