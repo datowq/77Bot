@@ -13,7 +13,7 @@ module.exports = {
 			var name = nextone.slice(0, nextone.indexOf(' '));
 			var nsfwlabel = nextone.slice(nextone.indexOf(' '));
 			
-			return message.channel.send(nsfw);
+			return message.channel.send(nsfwlabel);
 
 			if(type === "voice" || type === "Voice" || type === "v" || type === "V") {
 
