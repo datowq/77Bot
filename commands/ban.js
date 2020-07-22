@@ -13,11 +13,11 @@ module.exports = {
 					member.ban('Bye').then(() => {
 						return message.reply(`bye bye ${user.tag}`);
 					})
-					.catch(err => {
+					/*.catch(err => {
 						return message.reply('What?!');
 
 						console.error(err);
-					});
+					});*/
 			}
 
 			else {
