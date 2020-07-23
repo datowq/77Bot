@@ -10,10 +10,12 @@ module.exports = {
 			var str = message.content.slice(15);
 			var secondstr = str.slice(str.indexOf(' ')+1);
 			var thirdstr = secondstr.slice(secondstr.indexOf(' ')+1);
+			var fourthstr = thirdstr.substring(thirdstr.indexOf(' ')+1);
 
 			var type = str.slice(0, str.indexOf(' '));
 			var name = secondstr.slice(0, secondstr.indexOf(' '));
-			var nsfwlabel =  secondstr.slice(secondstr.indexOf(' ')+1);
+			var nsfwlabel =  thirdstr;
+			var desc = fourthstr;
 			
 			message.channel.send(nsfwlabel);
 
@@ -27,6 +29,7 @@ module.exports = {
 			message.guild.channels.create(name, {
 				type: type,
 				nsfw: nsfwlabel,
+				topic: desc,
 				permissionOverwrites: [
 				{
 					id: message.author.id,
