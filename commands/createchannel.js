@@ -16,14 +16,6 @@ module.exports = {
 			var name = secondstr.slice(0, secondstr.indexOf(' '));
 			var nsfwlabel =  thirdstr.slice(0, thirdstr.indexOf(' '));
 			var desc = fourthstr;
-			
-			message.channel.send(nsfwlabel);
-
-			if(nsfwlabel === null || nsfwlabel === ' ') {
-
-				nsfwlabel = false;
-
-			}
 
 			// Create a new channel with permission overwrites
 			message.guild.channels.create(name, {
@@ -38,38 +30,7 @@ module.exports = {
 				],
 			})
 
-			/*if(type === "voice" || type === "Voice" || type === "v" || type === "V") {
-
-				// Create a new channel with permission overwrites
-				message.guild.channels.create(name, {
-					type: 'voice',
-					nsfw: nsfwlabel,
-					permissionOverwrites: [
-					{
-						id: message.author.id,
-						deny: ['VIEW_CHANNEL'],
-					},
-					],
-				})
-
-			}
-
-			if(type === "text" || type === "Text" || type === "t" || type === "T") {
-				
-				// Create a new channel with permission overwrites
-				message.guild.channels.create(name, {
-					type: 'text',
-					nsfw: nsfwlabel,
-					permissionOverwrites: [
-					{
-						id: message.author.id,
-						deny: ['VIEW_CHANNEL'],
-					},
-					],
-				})
-
-			}
-*/
+			
 		}
 
 		else {
