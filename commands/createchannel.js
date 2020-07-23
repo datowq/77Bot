@@ -15,6 +15,12 @@ module.exports = {
 			var name = secondstr.slice(0, secondstr.indexOf(' '));
 			var nsfwlabel =  secondstr.slice(secondstr.indexOf(' ')+1);
 			
+			if(nsfwlabel === null || nsfwlabel === ' ') {
+
+				nsfwlabel = false;
+
+			}
+
 			// Create a new channel with permission overwrites
 			message.guild.channels.create(name, {
 				type: type,
