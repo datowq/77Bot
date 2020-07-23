@@ -8,8 +8,8 @@ module.exports = {
 		if (message.member.hasPermission('MANAGE_CHANNELS')) {
 			
 			var str = message.content.slice(15);
-			var secondstr = str.slice(str.indexOf(' '));
-			var thirdstr = secondstr.slice(secondstr.indexOf(' '));
+			var secondstr = str.slice(str.indexOf(' ')+1);
+			var thirdstr = secondstr.slice(secondstr.indexOf(' ')+1);
 
 			var type = str.slice(0, str.indexOf(' '));
 			var name = secondstr.slice(0, secondstr.indexOf(' '));
