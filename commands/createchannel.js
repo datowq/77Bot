@@ -22,12 +22,12 @@ module.exports = {
 				type: type,
 				nsfw: nsfwlabel,
 				topic: desc,
-				permissionOverwrites: [
+				/*permissionOverwrites: [
 				{
 					id: message.author.id,
 					deny: ['VIEW_CHANNEL'],
 				},
-				],
+				],*/
 			})
 
 			
