@@ -16,21 +16,27 @@ module.exports = {
 			var name = secondstr.slice(0, secondstr.indexOf(' '));
 			var nsfwlabel =  thirdstr.slice(0, thirdstr.indexOf(' '));
 			var desc = fourthstr;
+			
+			if (nsfwlabel === 'nsfw') {
+
+				nsfwlabel = true;
+
+			}
+
+			if (nsfwlabel != 'false' || nsfwlabel != 'true' || nsfwlabel === 'nsfw') {
+
+				nsfwlabel = false;
+				desc = thirdstr.substring(0);
+
+			}
 
 			// Create a new channel with permission overwrites
 			message.guild.channels.create(name, {
 				type: type,
 				nsfw: nsfwlabel,
 				topic: desc,
-				/*permissionOverwrites: [
-				{
-					id: message.author.id,
-					deny: ['VIEW_CHANNEL'],
-				},
-				],*/
 			})
 
-			
 		}
 
 		else {
