@@ -14,7 +14,7 @@ module.exports = {
 
 			var type = str.slice(0, str.indexOf(' '));
 			var name = secondstr.slice(0, secondstr.indexOf(' '));
-			var nsfwlabel =  thirdstr;
+			var nsfwlabel =  thirdstr.slice(0, thirdstr.indexOf(' '));
 			var desc = fourthstr;
 			
 			message.channel.send(nsfwlabel);
