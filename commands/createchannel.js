@@ -13,7 +13,7 @@ module.exports = {
 
 			var type = str.slice(0, str.indexOf(' '));
 			var name = secondstr.slice(0, secondstr.indexOf(' '));
-			var nsfwlabel =  thirdstr.slice(thirdstr.indexOf(' '));
+			var nsfwlabel =  thirdstr.slice(thirdstr.indexOf('e'));
 			
 			return message.channel.send(str + '.\n' + secondstr  + '.\n' + thirdstr + '.\n' +  type + '.\n' +  name + '.\n' +  nsfwlabel);
 
