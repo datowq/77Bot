@@ -23,7 +23,7 @@ module.exports = {
 
 			}
 
-			if (nsfwlabel != 'false' && nsfwlabel != 'true' && nsfwlabel === 'nsfw') {
+			if (nsfwlabel != 'false' && nsfwlabel != 'true' && nsfwlabel != 'nsfw') {
 
 				nsfwlabel = false;
 				desc = thirdstr.substring(0);
