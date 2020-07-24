@@ -13,7 +13,7 @@ module.exports = {
 			var fourthstr = thirdstr.substring(thirdstr.indexOf(' ')+1);
 
 			var type = str.slice(0, str.indexOf(' '));
-			var name = secondstr.slice(0, secondstr.indexOf(' '));
+			var name = secondstr.slice(0, secondstr.indexOf(' ')+1);
 			var nsfwlabel =  thirdstr.slice(0, thirdstr.indexOf(' '));
 			var desc = fourthstr;
 			
