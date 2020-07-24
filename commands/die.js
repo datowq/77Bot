@@ -6,6 +6,10 @@ module.exports = {
 	name: 'die',
 	description: 'die',
 	execute(message, args) {
-        message.channel.delete()
+
+		if (message.member.hasPermission('MANAGE_CHANNELS')) {
+			message.channel.delete()
+		}
+		
     },
 };
