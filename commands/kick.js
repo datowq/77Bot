@@ -8,7 +8,7 @@ module.exports = {
         
         let member = await message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(r => r.user.username.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.guild.members.cache.find(r => r.displayName.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.member;
 
-        if (message.member.hasPermission('KICK_MEMBERS')) {
+       // if (message.member.hasPermission('KICK_MEMBERS')) {
 
                  member.kick().then(() => {
 
@@ -20,13 +20,13 @@ module.exports = {
                     console.error(err);
                 });
                 
-        }
+     //   }
 
-        else {
+     //   else {
 
             return message.reply("you don't have perms lmao");
 
-        }
+      //  }
 
 	},
 };

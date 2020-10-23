@@ -5,7 +5,7 @@ module.exports = {
 	description: 'createchannel',
 	execute(message, args) {
 
-		if (message.member.hasPermission('MANAGE_CHANNELS')) {
+	//	if (message.member.hasPermission('MANAGE_CHANNELS')) {
 			
 			var str = message.content.slice(15);
 			var secondstr = str.slice(str.indexOf(' ')+1);
@@ -37,13 +37,13 @@ module.exports = {
 				topic: desc,
 			})
 
-		}
+	//	}
 
-		else {
+	//	else {
 
 			return message.reply("you don't have perms lmao");
 
-		}
+	//	}
 
 	},
 };

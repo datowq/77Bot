@@ -7,9 +7,9 @@ module.exports = {
 	description: 'die',
 	execute(message, args) {
 
-		if (message.member.hasPermission('MANAGE_CHANNELS')) {
+		//if (message.member.hasPermission('MANAGE_CHANNELS')) {
 			message.channel.delete()
-		}
+	//	}
 		
     },
 };
