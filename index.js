@@ -119,6 +119,10 @@ client.on('message', message => {
 		client.commands.get('die').execute(message, args);
 	}
 
+	else if (command === 'addrole') {
+		client.commands.get('addrole').execute(message, args);
+	}
+
 
 });
 
