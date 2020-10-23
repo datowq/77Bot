@@ -12,7 +12,7 @@ module.exports = {
             
             var rolesc = message.content.slice(15);
 
-            let myRole = message.guild.roles.find(role => role.name === rolesc);
+            let myRole = message.guild.roles.find(role => role.name === "senrole");
             
             member.addRole(role).catch(console.error);
 
