@@ -11,6 +11,8 @@ module.exports = {
             let member = await message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(r => r.user.username.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.guild.members.cache.find(r => r.displayName.toLowerCase() === args.join(' ').toLocaleLowerCase()) || message.member;
             var str = message.content.slice(9);
             var secondstr = str.slice(str.indexOf(' ')+1);
+            message.reply(str);
+            message.reply(secondstr);
 
             message.member.roles.add(secondstr).then(() => {
                     //message.member.roles.add("721960072976138240");
