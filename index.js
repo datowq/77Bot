@@ -120,7 +120,7 @@ client.on('message', message => {
 	}
 
 	else if (command === 'addrole') {
-		client.commands.get('addrole').execute(message, args);
+		client.commands.get('addrole').run(client, message, args);
 	}
 
 
