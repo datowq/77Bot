@@ -115,8 +115,8 @@ client.on('message', message => {
 	}
 
 	//KILLS CHANNEL
-	else if (command === 'die') {
-		client.commands.get('die').execute(message, args);
+	else if (command === 'perish') {
+		client.commands.get('perish').execute(message, args);
 	}
 
 	else if (command === 'addrole') {
